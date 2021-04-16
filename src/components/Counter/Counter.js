@@ -15,7 +15,12 @@ const Counter = () => {
   return (
     <div>
       <h3 data-testid='header'>My Counter</h3>
-      <h2 data-testid='counter'>{counter}</h2>
+      <h2
+        data-testid='counter'
+        className={`${counter <= -100 ? 'red' : counter >= 100 ? 'green' : ''}`}
+      >
+        {counter}
+      </h2>
       <button data-testid='subtract-btn' onClick={subtractFromCounter}>
         -
       </button>
