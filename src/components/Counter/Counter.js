@@ -13,6 +13,7 @@ const Counter = () => {
         type='number'
         data-testid='input'
         value={input}
+        onChange={(e) => setInput(e.target.value)}
         className='text-center'
       />
       <button data-testid='add-btn'>+</button>
